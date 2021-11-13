@@ -34,11 +34,15 @@ db.onConnect(() => {
 });
 
 // app.use(express.static("index.html"));
+
 app.get("/", (req, res) => {
-  session = req.session;
-  console.log(session);
-  return res.send("Hello World! run on nodeman");
+  // session = req.session;
+  // console.log(session);
+  res.json({ status: 200, message: "Welcome to auth api. " });
 });
-app.listen(3000, () => {
+// app.listen(3000, () => {
+//   console.log(`Listening at http://localhost:3000`);
+// });
+app.listen(process.env.PORT || 3000, () => {
   console.log(`Listening at http://localhost:3000`);
 });
