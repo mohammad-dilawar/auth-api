@@ -8,6 +8,7 @@ npm start
 # API with register, login and change password endpoints.
 
 # Post: localhost:3000/api/user/register
+
 req body
 {
 "name":"jhondoe",
@@ -16,6 +17,7 @@ req body
 }
 
 # Post: localhost:3000/api/user/login
+
 req body
 {
 
@@ -25,6 +27,7 @@ req body
 }
 
 # Post: localhost:3000/api/user/logout
+
 Header:
 auth-token: <jwttoken>
 
@@ -32,8 +35,9 @@ req body
 {
 "logged": true
 }
-    
+
 # Post: localhost:3000/api/user/changepassword
+
 Header:
 auth-token: <jwttoken>
 Content-Type: application/json
