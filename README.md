@@ -5,9 +5,9 @@ npm install
 to run project
 npm start
 
-#API with register, login and change password endpoints.
+# API with register, login and change password endpoints.
 
-#Post: localhost:3000/api/user/register
+# Post: localhost:3000/api/user/register
 req body
 {
 "name":"jhondoe",
@@ -15,7 +15,7 @@ req body
 "password":"qwert123"
 }
 
-#Post: localhost:3000/api/user/login
+# Post: localhost:3000/api/user/login
 req body
 {
 
@@ -24,7 +24,7 @@ req body
 
 }
 
-#Post: localhost:3000/api/user/logout
+# Post: localhost:3000/api/user/logout
 Header:
 auth-token: <jwttoken>
 
@@ -32,8 +32,8 @@ req body
 {
 "logged": true
 }
-
-#POST localhost:3000/api/user/changepassword
+    
+# Post: localhost:3000/api/user/changepassword
 Header:
 auth-token: <jwttoken>
 Content-Type: application/json
