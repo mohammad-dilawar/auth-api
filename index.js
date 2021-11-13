@@ -32,7 +32,17 @@ app.use("/api/user", authRoute);
 db.onConnect(() => {
   console.log("database connected");
 });
-
+app.use((err, req, res, next) => {
+  // console.log(err);
+  const status = err.status || 500;
+  const message = err.message || errors.SERVER_ERR;
+  const data = err.data || null;
+  res.status(status).json({
+    type: "error",
+    message,
+    data,
+  });
+});
 // app.use(express.static("index.html"));
 
 app.get("/", (req, res) => {
